@@ -39,12 +39,12 @@ export default function BlogSave() {
       if (id) {
         result = await axios.put(`${APP_URL}/blog/${id}`, data);
         if (result.data.success) {
-          navigate("/blogs");
+          navigate("/blog-list");
         }
       } else {
         result = await axios.post(`${APP_URL}/blog`, data);
         if (result.data.success) {
-          navigate("/blogs");
+          navigate("/blog-list");
         }
       }
     } catch (e) {
